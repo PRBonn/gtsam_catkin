@@ -28,9 +28,12 @@ file(GLOB_RECURSE GTSAM_LIBS
     ${CATKIN_DEVEL_PREFIX}/libgtsam.so
 )
 
+set(GTSAM_SRC_DIR ${CATKIN_DEVEL_PREFIX}/lib/${PROJECT_NAME}/src)
 set(GTSAM_INCLUDE_DIRS
-    ${CATKIN_DEVEL_PREFIX}/lib/${PROJECT_NAME}/src/${GTSAM_PREFIX}-build/
-    ${CATKIN_DEVEL_PREFIX}/lib/${PROJECT_NAME}/src/${GTSAM_PREFIX}/)
+    ${GTSAM_SRC_DIR}/${GTSAM_PREFIX}-build/
+    ${GTSAM_SRC_DIR}/${GTSAM_PREFIX}/
+    # Expose some 3rd party tools as people generally relly on these.
+    ${GTSAM_SRC_DIR}/${GTSAM_PREFIX}/${GTSAM_PREFIX}/3rdparty/Eigen)
 
 catkin_package(
     INCLUDE_DIRS ${GTSAM_INCLUDE_DIRS}
