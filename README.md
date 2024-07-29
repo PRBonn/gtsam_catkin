@@ -1,7 +1,13 @@
+> [!IMPORTANT]
+> **Repository Archived**  
+> This repository has been archived and is no longer actively maintained. You are welcome to explore the code, but please note that no further updates, issues, or pull requests will be accepted.
+>
+> Thank you for your interest and contributions.
+
 # GTSAM meets Catkin #
 The package is a wrapper around GTSAM to allow using it easily with Catkin.
 
-## Funtionality ##
+## Functionality ##
 It features a CMake script that carries out main functions:
 - downloads specified GTSAM tag from GitHub repository (newest `develop` by
   default)
@@ -22,7 +28,7 @@ Alternatively, you can run cmake from source:
 Also, you can pass git tag if you want to (version 3.2.1):
 - `cmake -DGIT_TAG=3c1d2746a80e ..`
 
-**It downloads and builds GTSAM. It takes a lot of time, so have patience.**
+**It downloads and builds GTSAM. It takes a lot of time, so be patient.**
 
 ## Some details ##
 This package does all the work in CMake phase. The reason for this is that we
